@@ -1,0 +1,10 @@
+mkdir = make directory
+cd = change directory
+ls = list
+ls l = flag list with long format
+ls la = shows all files including the files normally in normal ls command
+pwd = show the current active directory
+grep = prints libnes of input matching a specified pattern
+"pipes and redirection" = output fra en kommando som blir omdirigert som input i en ny kommando, dette kan bli gjort i en serie med kommandoer ogs[ kaldt pipeline
+cat = commando that concatenates and lists files puts together charecter strings
+less = use to view put not edit a text file

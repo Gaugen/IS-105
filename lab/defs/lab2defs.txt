@@ -1,0 +1,51 @@
+lab2defs
+
+operator prioritet er en regel for aa klaregjoere hvilken prosedyre som skal bli gjort foerst. F.eks i mange dataspraak vil ganging bli gjort foer plussing. 
+
+one's complement er at vi har et tall vi finner biner versjonen av saa skriver vi det opp og bytter alle 1 med 0, og 0 med 1. for aa faa det negative biner tallet.
+eks +7 = 0111
+snur rundt = 1000 = -7
+
+twos complement er en annen maate aa faa negative tall binert paa. da skriver vi onsket tall i biner form, legger paa en 0 paa venstre side, snur tallene som i one's complement,saa plusser vi tallet vi fikk etter vi snudde med 1 paa binerform naturligvis, 0 vi satt inn til venstre blir negativ i resultatet mens de andre 1 og 0er blir pluss
+eks 
+10001 = 17 legger paa 0 og faar 010001
+snur = 101110
+plusser paa 1
+ 101110
++     1
+=101111 , slotten der vi satt inn 0 blir negativ os skal trekkes ifra de andre.
+
+ 1 +01111
+-32+15 = -17
+
+saa naar PCen skal lagre minus verdier maa den complemente binertall slik at den vet at det er en negativ verdi. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+the ones complement of a binary numer is defied as the value obtained by inverting all the bits in the binary representation of the number(swapping 0 for 1  and vice verca) the ones complement of the number then behaves like the negative of the original number in some arithmetic operations.
