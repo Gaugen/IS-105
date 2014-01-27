@@ -18,8 +18,7 @@ def ascii_fugl():
 	
 # Oppgave 2 | 
 def bitAnd(x, y):
-	return x&y
-	
-test = bitAnd(6, 5)
+	x = 6
+	y = 5
+	return x&y 
 
-print "test: %d"
