@@ -22,4 +22,4 @@ def bitAnd(x, y):
 	
 test = bitAnd(6, 5)
 
-print "test: %d"
+
