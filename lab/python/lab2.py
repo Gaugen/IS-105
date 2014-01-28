@@ -30,5 +30,12 @@ def ascii8Bin (A):
     A = '{0:08b}'.format(2)
     return A
 
+<<<<<<< HEAD
 ascii_fugl()
 bitAnd(6, 10)
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 44de6489c3fde5d8712b569f3a1b055c4ef288ef
+>>>>>>> 115cf685f30acad88efb1b1d428883b00f8250ce
