@@ -13,7 +13,7 @@ snur = 101110
 plusser paa 1
  101110
 +     1
-=101111 , slotten der vi satt inn 0 blir negativ os skal trekkes ifra de andre.
+=101111 , plassen der vi satt inn 0 blir negativ os skal trekkes ifra de andre.
 
  1 +01111
 -32+15 = -17
