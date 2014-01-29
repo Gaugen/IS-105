@@ -13,7 +13,11 @@ snur = 101110
 plusser paa 1
  101110
 +     1
+<<<<<<< HEAD
 =101111 , slotten der vi satt inn 0 blir negativ og skal trekkes ifra de andre.
+=======
+=101111 , plassen der vi satt inn 0 blir negativ os skal trekkes ifra de andre.
+>>>>>>> c2b2629cec445c189b94dbbd282d091bb2a71fdd
 
  1 +01111
 -32+15 = -17
