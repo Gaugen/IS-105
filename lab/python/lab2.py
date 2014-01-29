@@ -24,18 +24,23 @@ def bitXor (x, y):
 #Oppgave 5 | Finner bitOr av x og y
 def bitOr (x, y):
     return x|y
-#Oppgave 6 | Finner 
-def ascii8Bin (A):
-    ord('A')
-    A = '{0:08b}'.format(2)
-    return A
-
-<<<<<<< HEAD
-ascii_fugl()
-bitAnd(6, 10)
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 44de6489c3fde5d8712b569f3a1b055c4ef288ef
->>>>>>> 115cf685f30acad88efb1b1d428883b00f8250ce
+#Oppgave 6 | Finner bitkodent til bokstaven 
+def ascii8Bin(x):
+    print '{0:08b}'.format(ord (x))
+   
+#Oppgave 7 |  finner bitkoden til tekststreng
+def transferBin(x):
+    l = list(x)
+    for c in l:
+        ascii8Bin(c)
+#Oppgaver 8 | gjor om desimalverdien av bokstaver om til et tall, tar saa aa #finner bitverdien til det tallet 
+def asciiHexBin (x):
+    print '{0:08x}'.format(ord (x))
+#Oppgave 8 | Finner hexaverdien til tekst stringen.
+def transferHex(x):
+    l = list(x)
+    for c in l:
+	asciiHexBin(c)
+# svar
+print transferBin ('Tulling')
+print transferHex ('Hi')
