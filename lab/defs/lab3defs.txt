@@ -1,0 +1,10 @@
+Regulære uttrykk brukes i mange tekstbehandlere og verktøy for å søke etter og manipulere tekst basert på gitte mønstre.
+
+Import i Python: hvis du skriver import x der x er navnet på biblioteket du vil laste inn, så kan du bruke predefinerte funksjoner ved å skrive x."kommando" der x er navnet på biblioteket. 
+
+Skriptspråk er et type programmeringsspråk som tolkes og utføres av separate programmer. 
+
+Perl - Perl (Practical Extraction and Report Language) er et programmeringsspråk. Språket «låner» mye av sin funksjonalitet fra for eksempel C, Unix-skripting (sh), awk, sed, Lisp og (i mindre grad) mange andre programmeringsspråk.
+
+Bash - Bash står for Bourne Again Shell og er det vansligste skallet for linux. Bash scripting kan blandt annet brukes til å forrenkle jobber , lage instalsjons programmer (tekstbaserte).
+
