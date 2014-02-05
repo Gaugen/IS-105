@@ -33,17 +33,25 @@ def min_sys_info():
     print "os brukere: " + os.getlogin()
 
 #Oppgave 3 |
-#def initialer(navn):
-    #l = str(navn)
-    #return str.find(l, 0, 20)
+def initialer(navn):
+    fornavn = navn[0]
+    m = navn.find (" ")
+    etternavn = navn[m + 1] 
+    fulltnavn = fornavn + "." + etternavn + "."
+    print fulltnavn
 
-#def transferHex(x):
- #   l = list(x)
-  #  for c in l:
-#	asciiHexBin(c)
-#initialer('Tor Arne')
-def mongo(navn):
-    n = str(navn)
-    for c in n:
-	str.find(n, 0, 20)
-mongo("Tor Arne")
+#Oppgave 4 |
+def infix_to_prefix(infix):
+    regexp1 = r"[0-9]+" #finner tall  
+    regexp2 = r"[*+-/]+"# finner +-*/
+    operands = re.findall(regexp1, infix) # [2, 3]
+    operator = re.findall(regexp2, infix) # [+]
+    mongo = operator + operands
+    result = ' '.join(mongo)
+    print result
+
+
+lab3_scripts()
+min_sys_info()
+initialer("Tor Arne")
+infix_to_prefix("2+3")
