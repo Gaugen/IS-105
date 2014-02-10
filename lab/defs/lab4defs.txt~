@@ -1,0 +1,18 @@
+API - Api står for application programming interface og beskriver metoder som en gitt programvare eller bibliotek kan kommunisere med, dvs at spesifikke programvare henter noe fram en annen programvare.
+
+IDE -(Integrated Development Enviroment) er en type programvare som brukes til å skrive og lage annen programvare. En typisk IDE inneholder oftest:
+Teksteditor, Kompilator og/eller tolk, Debugger, Verktøy for revisjonskontroll og Eclipse og BlueJ er et eksempel på IDE.
+ 
+ps - Ps(PostSkript) er ett datamaskinspråk som fungerer som et bindeledd mellom skriveprogram og utskriftsenhet, feks word og printer. Ps skaper ett bilde av det du skrev/laget og lagrer det i minne klar for utskrift.
+
+top - Taskmanageren til Linux.
+
+df - DF er en commando i linux som viser hvor mye diskplass du har i filsystemet.
+
+kill - kommando som dreper prossesser.
+
+netstat - Netstat er en kommando i linux for å få informasjons om nettverkkoplinger, routers, og andre statistikker, denne kommandoen kan være brukbar til å lete etter mistenkelige nettverkskoblinger.
+
+ipconfig - ipconfig er en kommando som vil vise deg en oversikt over nettverkstilkoblinger og nettverkskort på maskinen.
+
+who - en kommando som finner ut hvem som er logget på systemet. kan skrive andre beskrivelser etter kommandoen og få opp annen informasjon om når systemet var bootet sist og andre system og administrasjonsinformasjon.
