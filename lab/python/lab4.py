@@ -29,14 +29,17 @@ import psutil # Kan installeres med "pip2.7 install psutil"
 #		steal = 0.00
 #		guest = 0.00
 #
-#def psutils_use():
-#	"""
-#	Henter lister med systeminformasjon fra /proc og bearbeider disse
-#	"""
-	# Impleementer funksjonen her
+def psutils_use():	
+    name = psutil.cpu_times()._fields
+    value = tuple(psutil.cpu_times())
+    psutils = zip( name, value)
+    for name, value in psutils:
+	print name, " = ", value
+psutils_use()
 
-	
-#psutils_use()
+
+"cputimes(user=25.71, nice=0.0, system=109.07, idle=969.55, iowait=77.03, irq=9.25, softirq=2.76, steal=0.0, guest=0.0)"
+
 
 
 # Oppgave 2
@@ -52,20 +55,17 @@ import psutil # Kan installeres med "pip2.7 install psutil"
 #		Java/Oak ble startet 1991 av James Gosling.
 #		Ruby ble startet 1991 av Yukihiro "Matz" Matsumoto.
 #		Go/golang ble startet 2007 av Robert Griesemer, Rob Pike, and Ken Thompson.
-#			
+#		
 def print_history(proglangs):
-	# Implementer funksjonen her
-    sorted(proglangs, key=lamda proglangs: proglangs[1]) #sort by year
+    tupled = tuple(proglangs)
+    sortert = sorted(tupled, key=lambda year: year[1]) #sort by year
+    setning = [lang + " ble startet " + year + " av " + name + " . "
+    for lang, year, name in sortert]
+    for c in setning:
+	print c
+    
+proglangs = [('Python', '1989', 'Guido van Rossum'), ('C', '1969', 'Dennis Ritchie'), ('Java/Oak', '1991', 'James Gosling'), ('C++', '1979', 'Bjarne Stroustrup'), ('Ruby', '1991', 'Yukihiro "Matz" Matsumoto'), ('Perl', '1987' , 'Larry Wall'), ('Go/golang', '2007', 'Robert Griesemer, Rob Pike, and Ken Thompson')] 
 
-proglangs = [('Python', '1989', 'Guido van Rossum'), ('C', '1969', 'Dennis Ritchie'), ('Java/Oak', '1991', 'James Gosling'), ('C++', '1979', 'Bjarne Stroustrup'), ('Ruby', '1991', 'Yukihiro "Matz" Matsumoto'), ('Perl', '1987' , 'Larry Wall'), ('Go/golang', '2007', 'Robert Griesemer, Rob Pike, and Ken Thompson')]
+    
 print_history(proglangs)
-
-
-# Standardkall for evalueringen
-#print 5*"-" + " Studenter: " + 5*"-"
-#for s in gruppe.values():
-#	if s is not "-":
-#		print s
-
-
 
