@@ -63,13 +63,13 @@ def hand_rank(hand):
 		JC TC 9C 8C 7C => (8, 11) Straight Flush (8) Jack (11) High
 		AS AH AC AD QH => (7, 14, 12) Four Aces (7, 14)  and a Queen kicker (12)
 	"""
-	ranks = card_ranks(hand)
+	"""ranks = card_ranks(hand)
 	if straight(ranks) and flush(hand):
 		return (8, max(ranks)) # 2 3 4 5 6 => (8, 6)
 	elif kind(4, ranks): # kan returnere baade boolean og tall, i Java 0 er False
 		return (7, kind(4, ranks), kind(1, ranks)) # 9 9 9 9 3 (7, 9, 3)
-	elif kind((3, ranks), (2, ranks)) # finner forst tre like av storst verdi, saa finner et par etterpaa.
-		return (6, kind(3, ranks), kind(2, ranks)) # 5 5 5 6 6 (6,5,6)
+	elif kind((3, ranks),(2, ranks)) # finner forst tre like av storst verdi, saa finner et par etterpaa.
+		return (6, kind(3, ranks), kind(2, ranks)) # 5 5 5 6 6 (6,5,6)"""
 	#elif kind(5, fem av samme sort)
 	#	return (5
 	  
@@ -80,10 +80,11 @@ def hand_rank(hand):
 # Funksjonene card_ranks(hand) returnerer en ORDNET tuple av verdier (ranks)
 # Verdier for J, Q, K og A er tilsvarende 11, 12, 13, 14. 
 # En hånd TD TC TH 7C 7D skal returnere [10,10,10,7,7]
-def card_ranks(hand):
 	# Oppgave 4: implementer funksjonen her og legg til testtilfeller i funksjonen test()
-	return None
-
+def card_ranks(hand):
+    ranks = ['..23456789TJQKA'.index(r) for r,s in hand]
+    ranks.sort(reverse = True)   
+    return ranks
 # Disse hjelpefunksjonene skal vi jobbe med videre i senere lab oppgaver.
 # Funksjonen straight(ranks) returner True hvis hånden er en Straight.
 def straight(ranks):
@@ -134,6 +135,8 @@ def test():
 	assert poker ([fh, fh]) == fh
 	#3
 	assert poker ([st, tp]) == st
+	#4 
+	assert card_ranks(sf) == [10, 9, 8, 7, 6]
 
 	# Oppgave 3
 	# Skriv 2 nye testtilfeller:
@@ -151,14 +154,17 @@ def test():
 	
 
     # 
-    # Funksjonen hard_rank er ennå ikke implementert
+    # Funksjonen card_rank er ennå ikke implementert
 	# Her er gitt noen eksempler på testing av denne funksjonen som man kan bruke på et senere tidspunkt
     #
 	#assert hand_rank(sf) == (8,10)
 	#assert hand_rank(fk) == (7,9,7)
 	#assert hand_rank(fh) == (6,10,7)
+# rank = [r for r,s in sfs] skiller stringen 
 	return "Done testing"
 
+
 print test()
+
 
 
