@@ -136,7 +136,7 @@ def test():
 	#3
 	assert poker ([st, tp]) == st
 	#4 
-	assert card_ranks(sf) == [10, 9, 8, 7, 6]
+	
 
 	# Oppgave 3
 	# Skriv 2 nye testtilfeller:
@@ -151,7 +151,7 @@ def test():
 	# Implementer funksjonen card_rank(hand) og legg til tester for 
 	# sf, fk og fh variabler som er definert i denne testfunksjonen
 	# Du kan gjerne definere flere hender og legge til flere tester :)
-	
+	assert card_ranks(sf) == [10, 9, 8, 7, 6]
 
     # 
     # Funksjonen card_rank er ennå ikke implementert
