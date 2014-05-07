@@ -119,7 +119,7 @@ while inputs:
 				if data == 'JOIN\n':
 					if numberOfPlayers == 3: #maks 3 spillere
 						print >>sys.stderr, 'maks antall spillere er nådd'
-						error = 'for mange spillere med'
+						error = 'for mange spillere med. '
 						message_queues[s].put(error)
 					else:
 						board.append(s.getpeername())
@@ -133,9 +133,7 @@ while inputs:
 							play = dict(zip(board, hands))
 							dealSuccess = 'kort utdelt'
 							message_queues[s].put(dealSuccess)
-					else:
-						data = 'Bordet er ikke fullt, trenger flere spillere'
-						message_queues[s].put(data)
+					
 
 					if data == "GETHAND\n":
 						hand = play.get(s.getpeername())
