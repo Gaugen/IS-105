@@ -129,7 +129,7 @@ while inputs:
 
 					if data == 'DEAL\n':
 						if numberOfPlayers == 3:
-							hands = poker.deal(3)
+							hands = lab11.deal(3)
 							play = dict(zip(board, hands))
 							dealSuccess = 'kort utdelt'
 							message_queues[s].put(dealSuccess)
