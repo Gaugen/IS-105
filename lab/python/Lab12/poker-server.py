@@ -24,17 +24,22 @@ import lab11
 # For enkelhets skyld deler vi ut kort i det vi starter server
 # Dette bør skje på forespørsel fra en klient i neste versjon av programmet
 #hands = poker.deal(3)
-hands = lab11.deal(3)
+#hands = lab11.deal(3)
 handsdelt = 0 # Vi trenger en variabel som holder styr på hvor mange hender er delt ut
+board = []
+hands = []
+numberOfPlayers = 0
 
 # Lage en TCP/IP socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setblocking(0)
 
+
 # Binde socketen på lokalmaskinen til porten 10000
 server_address = ('localhost', 10000)
 print >>sys.stderr, 'starter socket på %s og port %s' % server_address
 server.bind(server_address)
+
 
 # Høre / vente på innkommende forbindelser
 server.listen(5)
@@ -112,10 +117,33 @@ while inputs:
 				# og hvor du også må finne en måte å dele ut kort på til hver av spillere
 				# hands er her laget ved start av server, men finn også ut 
 				if data == 'JOIN\n':
-					data = ' '.join(str(x) for x in hands[0])
+					if numberOfPlayers == 3: #maks 3 spillere
+						print >>sys.stderr, 'maks antall spillere er nådd'
+						error = 'for mange spillere med'
+						message_queues[s].put(error)
+					else:
+						board.append(s.getpeername())
+						numberOfPlayers += 1
+						joinSuccess = 'Du er nå med i spillet som nr %d' % numberOfPlayers
+						message_queues[s].put(joinSuccess)
+
+					if data == 'DEAL\n':
+						if numberOfPlayers == 3:
+							hands = poker.deal(3)
+							play = dict(zip(board, hands))
+							dealSuccess = 'kort utdelt'
+							message_queues[s].put(dealSuccess)
+					else:
+						data = 'Bordet er ikke fullt, trenger flere spillere'
+						message_queues[s].put(data)
+
+					if data == "GETHAND\n":
+						hand = play.get(s.getpeername())
+						handString = str(hand)
+						message_queues[s].put(handString)	
 
 
-				message_queues[s].put(data)
+				
 				
 
 				# Legg til UT-kanalen for responsen
